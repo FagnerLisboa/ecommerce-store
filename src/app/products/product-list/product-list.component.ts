@@ -61,6 +61,24 @@ export class ProductListComponent {
       price: 299.90,
       imageUrl: 'assets/jaqueta.jpeg'
     },
+    {
+      id: 10,
+      name: 'Iphone 15 Pro Max',
+      price: 699.90,
+      imageUrl: 'assets/iphone.jpg'
+    },
+    {
+      id: 11,
+      name: 'Xiaomi Poco F6 Pro',
+      price: 499.90,
+      imageUrl: 'assets/pocoF6.jpg'
+    },
+    {
+      id: 12,
+      name: 'Notebook Dell Inspiron',
+      price: 899.90,
+      imageUrl: 'assets/notebook.jpg'
+    },
   ];
 
   addToCart(product: any) {
