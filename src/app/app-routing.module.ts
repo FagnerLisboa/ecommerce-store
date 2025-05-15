@@ -4,6 +4,7 @@ import { LayoutComponent } from './shared/layout/layout.component';
 import { HomeComponent } from './home/home.component';
 import { ProductListComponent } from './products/product-list/product-list.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { CartComponent } from './cart/cart.component';
 
 const routes: Routes = [
   {
@@ -13,6 +14,7 @@ const routes: Routes = [
       { path: 'products', component: ProductListComponent },
       { path: 'home', component: HomeComponent },
       { path: '', redirectTo: 'home', pathMatch: 'full' },
+      { path: 'cart', component: CartComponent },
       { path: '**', component: NotFoundComponent }
     ]
   }

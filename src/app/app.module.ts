@@ -14,6 +14,7 @@ import { ProductFormComponent } from './products/product-form/product-form.compo
 import { ProductDetailsComponent } from './products/product-details/product-details.component';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { LayoutComponent } from './shared/layout/layout.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { LayoutComponent } from './shared/layout/layout.component';
     ProductDetailsComponent,
     SidebarComponent,
     LayoutComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,
