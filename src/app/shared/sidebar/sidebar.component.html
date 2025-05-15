@@ -1,0 +1,25 @@
+<!-- BOTÃO FLUTUANTE MOBILE FORA DA SIDEBAR -->
+<button *ngIf="isMobile && !isMobileOpen" class="mobile-fab" (click)="toggleMobileSidebar()">
+  <i class="fas fa-bars"></i>
+</button>
+
+<!-- SIDEBAR -->
+<div class="sidebar" [class.collapsed]="isCollapsed" [class.mobile-open]="isMobileOpen" [class.mobile]="isMobile">
+
+  <div class="top">
+    <h2 class="logo">🛒</h2>
+
+    <!-- Toggle desktop -->
+    <button *ngIf="!isMobile" class="toggle-btn" (click)="toggleSidebar()">
+      <i class="fas" [ngClass]="isCollapsed ? 'fa-chevron-right' : 'fa-chevron-left'"></i>
+    </button>
+  </div>
+
+  <ul class="menu" (click)="closeMobileSidebar()">
+    <li><a routerLink="/home" routerLinkActive="active"><i class="fas fa-home"></i><span>Home</span></a></li>
+    <li><a routerLink="/products" routerLinkActive="active"><i class="fas fa-box"></i><span>Produtos</span></a></li>
+    <li><a routerLink="/cart" routerLinkActive="active"><i class="fas fa-shopping-cart"></i><span>Carrinho</span></a>
+    </li>
+    <li><a routerLink="/contato" routerLinkActive="active"><i class="fas fa-envelope"></i><span>Contato</span></a></li>
+  </ul>
+</div>

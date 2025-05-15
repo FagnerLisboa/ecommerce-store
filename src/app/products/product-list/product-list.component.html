@@ -1,0 +1,10 @@
+<div class="product-grid">
+  <div class="product-card" *ngFor="let product of products">
+    <img [src]="product.imageUrl" [alt]="product.name" class="product-image" />
+    <h3 class="product-name">{{ product.name }}</h3>
+    <p class="product-price">R$ {{ product.price | number:'1.2-2' }}</p>
+    <button class="buy-button" (click)="addToCart(product)">
+      Adicionar ao carrinho
+    </button>
+  </div>
+</div>
