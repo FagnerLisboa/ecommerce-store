@@ -11,16 +11,17 @@
 }
 
 app-sidebar {
-  width: 250px;
+  width: 220px;
   background-color: #f4f4f4;
   border-right: 1px solid #ddd;
+  flex-shrink: 0;
 }
 
 .main-content {
   flex: 1;
   padding: 1rem;
   overflow-y: auto;
-  background-color: #fafafa;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 app-header,

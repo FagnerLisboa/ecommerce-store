@@ -1,0 +1,15 @@
+<div class="admin-container">
+  <div class="admin-header">
+    <h1><i class="fas fa-user-shield"></i> Painel do Administrador</h1>
+    <p>Bem-vindo ao painel de administração. Aqui você pode gerenciar os recursos do sistema.</p>
+  </div>
+
+  <div class="admin-actions">
+    <div class="admin-card" *ngFor="let action of adminActions">
+      <i [class]="action.icon"></i>
+      <h3>{{ action.title }}</h3>
+      <p>{{ action.description }}</p>
+      <button (click)="navigate(action.route)">Acessar</button>
+    </div>
+  </div>
+</div>

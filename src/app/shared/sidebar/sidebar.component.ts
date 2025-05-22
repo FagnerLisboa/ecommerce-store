@@ -10,7 +10,20 @@ export class SidebarComponent {
   isMobileOpen = false;
   isMobile = false;
 
-  @HostListener('window:resize', ['$event'])
+  isAdmin = true;
+
+  menuItems = [
+    { label: 'Home', icon: 'fas fa-home', route: '/home' },
+    { label: 'Produtos', icon: 'fas fa-box', route: '/products' },
+    { label: 'Carrinho', icon: 'fas fa-shopping-cart', route: '/cart' },
+    { label: 'Contato', icon: 'fas fa-envelope', route: '/contato' }
+  ];
+
+  adminItems = [
+    { label: 'Administrador', route: '/administrator', icon: 'fas fa-user-shield' },
+  ];
+
+  @HostListener('window:resize')
   onResize() {
     this.isMobile = window.innerWidth <= 768;
     if (!this.isMobile) {
@@ -23,7 +36,7 @@ export class SidebarComponent {
   }
 
   toggleSidebar() {
-    this.isCollapsed = !this.isCollapsed;
+    this.isCollapsed = this.isCollapsed;
   }
 
   toggleMobileSidebar() {

@@ -11,17 +11,26 @@
 
     <!-- Toggle desktop -->
     <button *ngIf="!isMobile" class="toggle-btn" (click)="toggleSidebar()">
-      <i class="fas" [ngClass]="isCollapsed ? 'fa-chevron-right' : 'fa-chevron-left'"></i>
+      <!-- <i class="fas" [ngClass]="isCollapsed ? 'fa-chevron-right' : 'fa-chevron-left'"></i> -->
     </button>
   </div>
 
   <!-- Exercício 1: tornar os menus dinâmicos e adicionar o menu de administrador -->
 
   <ul class="menu" (click)="closeMobileSidebar()">
-    <li><a routerLink="/home" routerLinkActive="active"><i class="fas fa-home"></i><span>Home</span></a></li>
-    <li><a routerLink="/products" routerLinkActive="active"><i class="fas fa-box"></i><span>Produtos</span></a></li>
-    <li><a routerLink="/cart" routerLinkActive="active"><i class="fas fa-shopping-cart"></i><span>Carrinho</span></a>
+    <li *ngFor="let item of menuItems">
+      <a [routerLink]="item.route" routerLinkActive="active">
+        <i [class]="item.icon"></i><span>{{ item.label }}</span>
+      </a>
     </li>
-    <li><a routerLink="/contato" routerLinkActive="active"><i class="fas fa-envelope"></i><span>Contato</span></a></li>
+
+    <ng-container *ngIf="isAdmin">
+  <li class="admin-section-title">Administrador</li>
+  <li *ngFor="let adminItem of adminItems">
+    <a [routerLink]="adminItem.route" routerLinkActive="active" class="admin-link">
+      <i [class]="adminItem.icon"></i><span>{{ adminItem.label }}</span>
+    </a>
+  </li>
+</ng-container>
   </ul>
 </div>
