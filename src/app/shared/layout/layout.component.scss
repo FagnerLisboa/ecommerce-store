@@ -11,7 +11,7 @@
 }
 
 app-sidebar {
-  width: 220px;
+  width: 155px;
   background-color: #f4f4f4;
   border-right: 1px solid #ddd;
   flex-shrink: 0;
@@ -19,7 +19,7 @@ app-sidebar {
 
 .main-content {
   flex: 1;
-  padding: 1rem;
+  padding: 2rem;
   overflow-y: auto;
   background-color: rgba(0, 0, 0, 0.2);
 }
@@ -28,6 +28,7 @@ app-header,
 app-footer {
   background-color: #333;
   color: white;
+  height: 16px;
   padding: 1rem;
   text-align: center;
 }
