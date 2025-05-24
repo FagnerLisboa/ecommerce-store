@@ -16,11 +16,10 @@ export class SidebarComponent {
     { label: 'Home', icon: 'fas fa-home', route: '/home' },
     { label: 'Produtos', icon: 'fas fa-box', route: '/products' },
     { label: 'Carrinho', icon: 'fas fa-shopping-cart', route: '/cart' },
-    { label: 'Contato', icon: 'fas fa-envelope', route: '/contato' }
   ];
 
   adminItems = [
-    { label: 'Administrador', route: '/administrator', icon: 'fas fa-user-shield' },
+    { label: 'Administrador', icon: 'fas fa-user-shield', route: '/administrator' },
   ];
 
   @HostListener('window:resize')
