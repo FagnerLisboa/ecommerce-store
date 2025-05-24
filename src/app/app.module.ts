@@ -16,6 +16,9 @@ import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { LayoutComponent } from './shared/layout/layout.component';
 import { CartComponent } from './cart/cart.component';
 import { AdministratorComponent } from './administrator/administrator.component';
+import { UserListComponent } from './administrator/user/user-list/user-list.component';
+import { UserFormComponent } from './administrator/user/user-form/user-form.component';
+import { UserDetailsComponent } from './administrator/user/user-details/user-details.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +35,10 @@ import { AdministratorComponent } from './administrator/administrator.component'
     LayoutComponent,
     CartComponent,
     AdministratorComponent,
+    UserListComponent,
+    UserFormComponent,
+    UserDetailsComponent,
+  
   ],
   imports: [
     BrowserModule,
